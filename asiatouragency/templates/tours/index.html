@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Tours</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+    <div style="text-align: right;">
+        <form action="{% url 'logout' %}" method="post" >
+            {% csrf_token %}
+            <button type="submit" >Logout</button>
+        </form>
+    </div>
+
+    <h1>Go Here</h1>
+    <ul class="unstyled" style="list-style: none;">
+        {% for tour in tours %}
+            <li>{{ tour }}</li>
+        {% endfor %}
+    </ul>
+
+    <img src="{% static 'images/dv.jpeg' %}" alt="DV">
+
+    <a href="{% url 'contact_form' %}">
+        <button>Go To Contact Form</button>
+    </a>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

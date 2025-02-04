@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Success</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <h1>Contact Success</h1>
+
+    <p>
+        Form has been saved successfully!
+    </p>
+
+    <a href="{% url 'contact_form' %}">
+        <button>Go To Form Again</button>
+    </a>
+    <a href="{% url 'index' %}">
+        <button>Go To Home</button>
+    </a>
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
